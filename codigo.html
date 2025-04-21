@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Autenticação Secreta</title>
+  <style>
+    body {
+      background-color: black;
+      color: #00ffcc;
+      font-family: 'Courier New', monospace;
+      padding: 50px;
+      text-align: center;
+    }
+    input, button {
+      margin-top: 20px;
+      padding: 10px;
+      font-size: 16px;
+      font-family: 'Courier New', monospace;
+    }
+    input {
+      width: 300px;
+      background: #111;
+      border: 2px solid #ff0055;
+      color: #00ffcc;
+    }
+    button {
+      background-color: #ff0055;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #ff3366;
+    }
+  </style>
+</head>
+<body>
+  <h1>🔐 AUTENTICAÇÃO NECESSÁRIA</h1>
+  <p>Digite o código de acesso fornecido pelo Círculo Sombrio:</p>
+
+  <input type="text" id="codigo" placeholder="Insira o código secreto">
+  <br>
+  <button onclick="verificarCodigo()">VALIDAR</button>
+
+  <script>
+    function verificarCodigo() {
+      const codigo = document.getElementById("codigo").value.trim();
+      if (codigo === "ziron1.0") {
+        window.location.href = "arquivo-secreto.html";
+      } else {
+        alert("Código incorreto. A segurança foi alertada.");
+      }
+    }
+  </script>
+</body>
+</html>

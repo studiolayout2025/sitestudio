@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Enigma</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #0f0;
+      font-family: 'Courier New', monospace;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+
+    input {
+      padding: 10px;
+      font-size: 18px;
+      border-radius: 5px;
+      border: 2px solid #0f0;
+      background-color: #111;
+      color: #0f0;
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: #0f0;
+      color: #000;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .resultado {
+      margin-top: 20px;
+      font-size: 22px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>🧠 Enigma Iniciado</h1>
+  <p>Para avançar, responda corretamente:</p>
+  <p><em>"Quanto mais você tira, maior ele fica?"</em></p>
+
+  <input type="text" id="resposta" placeholder="Digite sua resposta...">
+  <button onclick="verificar()">Enviar</button>
+
+  <div class="resultado" id="resultado"></div>
+
+  <script>
+    function verificar() {
+      const resposta = document.getElementById('resposta').value.trim().toLowerCase();
+      const resultado = document.getElementById('resultado');
+
+      if (resposta === 'buraco') {
+        resultado.style.color = '#0f0';
+        resultado.innerText = '✔️ Correto. Acesso concedido.';
+        setTimeout(() => {
+          window.location.href = 'nivel2.html'; // futura próxima página
+        }, 2000);
+      } else {
+        resultado.style.color = 'red';
+        resultado.innerText = '❌ Resposta incorreta. Tente novamente.';
+      }
+    }
+  </script>
+</body>
+</html>

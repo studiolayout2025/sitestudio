@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Transmissão Binária</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Courier New', monospace;
+      background: radial-gradient(ellipse at center, #001010 0%, #000000 100%);
+      color: #00ffcc;
+      overflow: hidden;
+    }
+
+    .fundo-holografico {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: repeating-linear-gradient(45deg, rgba(0,255,255,0.05) 0px, rgba(0,255,255,0.05) 1px, transparent 1px, transparent 4px),
+                        repeating-linear-gradient(-45deg, rgba(0,255,255,0.05) 0px, rgba(0,255,255,0.05) 1px, transparent 1px, transparent 4px);
+      animation: movimento 15s linear infinite;
+      z-index: 0;
+    }
+
+    @keyframes movimento {
+      0% { background-position: 0 0, 0 0; }
+      100% { background-position: 200px 200px, -200px -200px; }
+    }
+
+    .conteudo {
+      position: relative;
+      z-index: 1;
+      padding: 60px;
+      text-align: center;
+    }
+
+    .enigma {
+      font-size: 20px;
+      color: #44ffee;
+      font-style: italic;
+      margin-bottom: 40px;
+      animation: piscar 2.5s infinite alternate;
+      text-shadow: 0 0 6px #00ffee80;
+    }
+
+    .binario {
+      font-size: 14px;
+      white-space: pre-wrap;
+      background: rgba(0, 255, 255, 0.05);
+      border: 1px solid #044;
+      padding: 30px;
+      border-radius: 8px;
+      line-height: 1.5;
+      text-shadow: 0 0 3px #00ffee99;
+    }
+
+    @keyframes piscar {
+      0% { opacity: 0.4; transform: translateY(0px); }
+      100% { opacity: 1; transform: translateY(-5px); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="fundo-holografico"></div>
+
+  <div class="conteudo">
+    <div class="enigma">
+      “Ele fala com dois som: o silêncio e o pulso.<br>
+      Um antigo idioma das máquinas, onde só existem dois reinos — o vazio e a corrente.<br>
+      Para entender a mensagem do líder, conte apenas até dois... e veja o invisível se revelar.”
+    </div>
+
+    <div class="binario">
+01001100 01101001 01100100 01100101 01110010 00100000 01000111 01100001 01101100 01100001 01100011 01110100 01101001 01100011 01101111 00100000 01100101 01110011 00100000 01100011 01101111 01101110 01101000 01100101 01100011 01101001 01100100 01101111 00100000 01100011 01101111 01101101 01101111 00100000 01011010 01100001 01110010 01101111 01101011<br>
+01001111 00100000 01110110 01100101 01110010 01100100 01100001 01100100 01100101 01101001 01110010 01101111 00100000 01101110 01101111 01101101 01100101 00100000 01100100 01100101 01101100 01100101 00100000 01100101 01110011 00100000 01000111 01100001 01100010 01110010 01101001 01100101 01101100 00100000 01001110 01100101 01101100 01110011 01101111 01101110
+    </div>
+  </div>
+
+      <!-- BOTÃO HÍBRIDO SECRETO -->
+      <a href="lider-galactico.html" class="botao-secreto">☍ Ativar Acesso ☍</a>
+
+      <style>
+        .botao-secreto {
+          display: inline-block;
+          margin-top: 50px;
+          padding: 14px 32px;
+          font-size: 14px;
+          font-family: 'Courier New', monospace;
+          color: #0ff;
+          background: linear-gradient(135deg, #001111, #002222, #004444);
+          border: 1px solid #00ffee55;
+          border-radius: 50px;
+          text-decoration: none;
+          text-shadow: 0 0 5px #00ffff88;
+          box-shadow: 0 0 15px #00ffee66;
+          transition: all 0.4s ease;
+          filter: brightness(0.5) grayscale(0.7);
+        }
+  
+        .botao-secreto:hover {
+          filter: brightness(1.2) grayscale(0);
+          background: linear-gradient(135deg, #00ffff33, #00ffee55, #00ffaa99);
+          box-shadow: 0 0 30px #00ffffaa;
+          color: #111;
+          text-shadow: 0 0 10px #fff;
+        }
+      </style>
+  
+</body>
+</html>
